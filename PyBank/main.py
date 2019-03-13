@@ -61,8 +61,14 @@ def financialAnalysis(financialData):
 
     #Export results to text file, pyBank_results.txt
     with open(outputPath, 'w', newline = '\r\n') as txtfile:
-        txtfile.write(f'Financial Analysis\r\n-----------------------------\r\nTotal Months:  {totalMonths}\r\nTotal Profit/Loss:  ${totalProfitLoss}\r\nAverage Change:  ${averageChange}\r\nGreatest Increase in Profits:  {greatestIncreaseMonth} (${greatestIncrease})\r\nGreatest Decrease in Profits:  {greatestDecreaseMonth} (${greatestDecrease})')
-
+        txtfile.write(f'''
+Financial Analysis\r\n
+-----------------------------\r\n
+Total Months:  {totalMonths}\r\n
+Total Profit/Loss:  ${totalProfitLoss}\r\n
+Average Change:  ${averageChange}\r\n
+Greatest Increase in Profits:  {greatestIncreaseMonth} (${greatestIncrease})\r\n
+Greatest Decrease in Profits:  {greatestDecreaseMonth} (${greatestDecrease})''')
 
 #Read input file and execute above financialAnalysis function
 with open(inputPath, newline = '') as csvfile:
